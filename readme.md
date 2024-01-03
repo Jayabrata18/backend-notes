@@ -50,6 +50,10 @@ Setup and Installation
 
 To start the project first you should clone the repository.
 
+```
+https://github.com/Jayabrata18/backend-notes
+```
+
 1. go to maindirectory and `npm i` to install all dependencies.
 2. make a `.env` file in root directory and add all necessary dependencies.
 3. now run `npm start` to start the project. It will run in `port 5000`. You can change in env file.
