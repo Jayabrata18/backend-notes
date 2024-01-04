@@ -28,9 +28,9 @@ The project relies on the following dependencies:
 
 Ensure you have a `.env` file in the project root with the following variables:
 
-## Third-Party Tools
+<!-- ## Third-Party Tools
 
-- **Puppeteer:** A headless browser automation tool. It is used for taking screenshots, generating previews, or any other browser-related automation tasks.
+- **Puppeteer:** A headless browser automation tool. It is used for taking screenshots, generating previews, or any other browser-related automation tasks. -->
 
 ```env
 PORT=5000

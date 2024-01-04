@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node  server.ts",
     "start": "ts-node-dev --files server.ts",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test:watch": "jest --watch"
   },
   "author": "JOY",

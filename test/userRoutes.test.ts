@@ -1,13 +1,11 @@
-// userRouter.test.js
-
-const request = require("supertest");
-const express = require("express");
-const { app } = require("../app"); // Update the path based on your project structure
+import request from "supertest";
+import express from "express";
+import { app } from "../app"; 
 
 describe("User Router Integration Tests", () => {
   // Test registration endpoint
   it("should register a new user", async () => {
-    const response = await request(app).post("/api/v1/registration").send({
+    const response = await request(app).post("/api/auth/registration").send({
       name: "Test User",
       email: "test@example.com",
       password: "password123",
@@ -20,7 +18,7 @@ describe("User Router Integration Tests", () => {
 
   // Test login endpoint
   it("should login an existing user", async () => {
-    const response = await request(app).post("/api/v1/login").send({
+    const response = await request(app).post("/api/auth/login").send({
       email: "test@example.com",
       password: "password123",
     });
@@ -33,7 +31,7 @@ describe("User Router Integration Tests", () => {
   // Test logout endpoint
   it("should logout the user", async () => {
     const response = await request(app)
-      .get("/api/v1/logout")
+      .get("/api/auth/logout")
       .set("Cookie", [
         "access_token=testAccessToken; refresh_token=testRefreshToken",
       ]);
@@ -45,7 +43,7 @@ describe("User Router Integration Tests", () => {
   // Test update access token endpoint
   it("should update the access token", async () => {
     const response = await request(app)
-      .get("/api/v1/refresh")
+      .get("/api/auth/refresh")
       .set("Cookie", ["refresh_token=testRefreshToken"]);
 
     expect(response.status).toBe(200);
