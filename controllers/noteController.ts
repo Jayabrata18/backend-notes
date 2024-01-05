@@ -104,7 +104,6 @@ export const deleteNote = catchAsyncError(
   }
 );
 
-//not done from here
 
 interface ShareNoteRequest {
   sharedUserId: string;
@@ -167,7 +166,6 @@ export const shareNote = catchAsyncError(
     }
   }
 );
-//end here
 export const searchNotes = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
